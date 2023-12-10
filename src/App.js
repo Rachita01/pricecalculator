@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
+import DataComponent from './components/DataComponent/DataComponent';
 
 function App() {
+  const [searchTerm,setSearchTerm] = useState(""); 
+  const [showDataComponent, setShowDataComponent] = useState(false); 
+
+  const handleSearch = event => {
+    setShowDataComponent(searchTerm.trim() !== '')
+  }
+
+  const handleChange = e => {
+    setSearchTerm(e.target.value)
+    if(e.target.value === ""){
+      setShowDataComponent(false)
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Price Calculator</h1>
+      <div>
+        <h3>Search your item here:</h3>
+        
+        <input
+        type="text"
+        placeholder='Search Item'
+        value={searchTerm}
+        onChange={handleChange}
+      />
+      <button onClick={handleSearch}>Search</button>
+
+      {showDataComponent && <DataComponent searchTerm={searchTerm} />}
+      </div>
     </div>
   );
 }

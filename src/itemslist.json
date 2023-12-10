@@ -1,0 +1,8 @@
+{
+  "items": [
+    {"id":1,"name": "cdm 10", "mrp": 10, "companymargin":2.0 ,"pieceinouter":10,"outerincase":20},
+    {"id":2,"name": "cdm 20", "mrp": 20, "companymargin":1.5 ,"pieceinouter":15,"outerincase":30},
+	  {"id":3,"name": "cdm 30", "mrp": 30, "companymargin":2.5 ,"pieceinouter":10,"outerincase":10},
+	  {"id":4,"name": "cdm 40", "mrp": 40, "companymargin":3.0 ,"pieceinouter":20,"outerincase":10}
+  ]
+}
