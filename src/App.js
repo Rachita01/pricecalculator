@@ -16,6 +16,13 @@ function App() {
       setShowDataComponent(false)
     }
   }
+
+  const handleEnterKey = (e) => {
+    if (e.key === 'Enter' && searchTerm.trim() !== '') {
+      // Pressed Enter key and input has text
+      handleSearch();
+    }
+  };
   return (
     <div>
       <h1>Price Calculator</h1>
@@ -27,6 +34,7 @@ function App() {
         placeholder='Search Item'
         value={searchTerm}
         onChange={handleChange}
+        onKeyUp={handleEnterKey}
       />
       <button onClick={handleSearch}>Search</button>
 

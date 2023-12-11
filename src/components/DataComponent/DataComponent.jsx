@@ -53,6 +53,11 @@ const DataComponent = ({ searchTerm }) => {
     return ((calculatePricePerCase(item) - ((discount/100)*calculatePricePerCase(item)))).toFixed(2)
   }
 
+  const handleEnterKey = (e) => {
+    if(e.key === "Enter" && searchTerm.trim()!==""){
+        handleDiscount();
+    }
+  }
   if(filteredData.length === 0) {
      return <p>Data not found!!!<br/> Please provide valid value</p>
   }
@@ -89,6 +94,7 @@ const DataComponent = ({ searchTerm }) => {
         placeholder='0'
         value={discount}
         onChange={(e) => setDiscount(e.target.value)}
+        onKeyUp={handleEnterKey}
       />
       <button onClick={handleDiscount}>Apply Discount</button>
       {showDiscount && 
