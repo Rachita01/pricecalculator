@@ -30,27 +30,27 @@ const DataComponent = ({ searchTerm }) => {
   console.log(filteredData)
 
   const calculatePricePerPiece = (item) => {
-    return item.mrp/item.companymargin
+    return (item.mrp/item.companymargin).toFixed(2)
   }
 
   const calculatePricePerOuter = (item) => {
-    return (item.mrp * item.pieceinouter)/item.companymargin
+    return ((item.mrp * item.pieceinouter)/item.companymargin).toFixed(2)
   }
 
   const calculatePricePerCase = (item) => {
-    return (item.mrp * item.pieceinouter * item.outerincase)/item.companymargin
+    return ((item.mrp * item.pieceinouter * item.outerincase)/item.companymargin).toFixed(2)
   }
 
   const calculatePricePerPieceAfterDiscount = (item) => {
-    return (calculatePricePerPiece(item) - ((discount/100)*calculatePricePerPiece(item)))
+    return ((calculatePricePerPiece(item) - ((discount/100)*calculatePricePerPiece(item)))).toFixed(2)
   }
 
   const calculatePricePerOuterAfterDiscount = (item) => {
-     return (calculatePricePerOuter(item) - ((discount/100)*calculatePricePerOuter(item)))
+     return ((calculatePricePerOuter(item) - ((discount/100)*calculatePricePerOuter(item)))).toFixed(2)
   }
 
   const calculatePricePerCaseAfterDiscount = (item) => {
-    return (calculatePricePerCase(item) - ((discount/100)*calculatePricePerCase(item)))
+    return ((calculatePricePerCase(item) - ((discount/100)*calculatePricePerCase(item)))).toFixed(2)
   }
 
   if(filteredData.length === 0) {
