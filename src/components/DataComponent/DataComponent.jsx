@@ -1,14 +1,20 @@
 import React,{useState,useEffect} from 'react'
+import ExcelCreation from '../ExcelCreation';
 
 const DataComponent = ({ searchTerm }) => {
     const [data, setData] = useState([]);
-    const [showDiscount,setShowDiscount] =  useState(false);
     const [discount,setDiscount] =  useState(0);
-    // const [quantity,setQuantity] = useState(0);
-    // const [option,setOption] = useState("");
-    const handleDiscount = event => {
-        setShowDiscount(true)
-      }
+    const [quantity,setQuantity] = useState(0);
+    const [option,setOption] = useState("");
+    const [list,setList] = useState(()=> {
+      const storedList = localStorage.getItem('list');
+      return storedList ? JSON.parse(storedList) : [];
+    });
+    const [createList,setCreateList] = useState(false);
+      useEffect(() => {
+        localStorage.setItem('list', JSON.stringify(list));
+        console.log(list)
+      }, [list]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,6 +30,7 @@ const DataComponent = ({ searchTerm }) => {
     fetchData();
   }, []);
 
+  useEffect(() => {console.log(list)},[list]);
   console.log(searchTerm);
   const filteredData = data.filter(item =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -43,92 +50,109 @@ const DataComponent = ({ searchTerm }) => {
     return ((item.mrp * item.pieceinouter * item.outerincase)/item.companymargin).toFixed(4)
   }
 
-  const calculatePricePerPieceAfterDiscount = (item) => {
+  const calculatePricePerPieceAfterDiscount = (item,discount) => {
+    if(discount === undefined || discount===0){
+      return calculatePricePerPiece(item);
+    }
+    else{
     return ((calculatePricePerPiece(item) - ((discount/100)*calculatePricePerPiece(item)))).toFixed(4)
-  }
-
-  const calculatePricePerOuterAfterDiscount = (item) => {
-     return ((calculatePricePerOuter(item) - ((discount/100)*calculatePricePerOuter(item)))).toFixed(4)
-  }
-
-  const calculatePricePerCaseAfterDiscount = (item) => {
-    return ((calculatePricePerCase(item) - ((discount/100)*calculatePricePerCase(item)))).toFixed(2)
-  }
-
-  const handleEnterKey = (e) => {
-    if(e.key === "Enter" && searchTerm.trim()!==""){
-        handleDiscount();
     }
   }
+
+  const calculatePricePerOuterAfterDiscount = (item,discount) => {
+    if(discount === undefined || discount===0){
+      return calculatePricePerOuter(item);
+    }
+    else{
+     return ((calculatePricePerOuter(item) - ((discount/100)*calculatePricePerOuter(item)))).toFixed(4)
+    }
+  }
+
+  const calculatePricePerCaseAfterDiscount = (item,discount) => {
+    if(discount === undefined || discount===0){
+      return calculatePricePerCase(item);
+    }
+    else{
+    return ((calculatePricePerCase(item) - ((discount/100)*calculatePricePerCase(item)))).toFixed(2)
+    }
+  }
+
   if(filteredData.length === 0) {
      return <p>Data not found!!!<br/> Please provide valid value</p>
   }
 
-  // const handleQuantityChange = (itemId, newValue) => {
-  //   setQuantity((prevQuantities) => ({
-  //     ...prevQuantities,
-  //     [itemId]: newValue,
-  //   }));
-  // };
+  const handleQuantityChange = (itemId, newValue) => {
+    setQuantity((prevQuantities) => ({
+      ...prevQuantities,
+      [itemId]: newValue,
+    }));
+  };
 
-  // const handleOptionChange = (itemId, newValue) => {
-  //   setOption((prevOption) => ({
-  //     ...prevOption,
-  //     [itemId]: newValue,
-  //   }));
-  // };
+  const handleOptionChange = (itemId, newValue) => {
+    setOption((prevOption) => ({
+      ...prevOption,
+      [itemId]: newValue,
+    }));
+  };
 
-  // const handleAddToList = (value,value1,value2) => {
-  //    console.log(value,value1,value2)
-  // }
+  const handleDiscount = (itemId,newValue) => {
+    setDiscount((prevDiscount) => ({
+      ...prevDiscount,
+      [itemId]:newValue,
+    }));
+  };
+
+  const handleAddToList = (item,quantity,option,price) => {
+
+    const itemIndex = list.findIndex(existItem => existItem.name === item.name);
+    if (itemIndex !== -1) {
+      const newDataList = [...list];
+      newDataList.splice(itemIndex, 1);
+      setList(newDataList);
+    }
+
+     if(option==="" || option === undefined){
+      option="Box";
+     }
+
+     if(option==="Box"){
+      var QuantityInPieces = (quantity * item.outerincase * item.pieceinouter).toString();
+      var TotalAmount = (QuantityInPieces * price).toFixed(2);
+     }
+     else if(option==="Outer"){
+       QuantityInPieces = (quantity * item.pieceinouter).toString();
+       TotalAmount = (QuantityInPieces * price).toFixed(2);
+     }
+     else{
+      QuantityInPieces = quantity;
+      TotalAmount = (QuantityInPieces * price).toFixed(2);
+     }
+
+     var new_obj = {
+      name:item.name,
+      quantity:QuantityInPieces,
+      amount:TotalAmount
+     }
+     console.log(item,quantity,option,price,QuantityInPieces,TotalAmount)
+     console.log(new_obj);
+     setList((prevList) => [...prevList,new_obj]);
+     setCreateList(true);
+  }
+  
   return (
     <div>
-      <h3>Details of Item before discount:</h3>
-      <table>
+     <table>
       <thead>
         <tr>
           <th>Item Name</th>
           <th>MRP</th>
+          <th>Apply Discount</th>
           <th>Price/Piece</th>
           <th>Price/Outer</th>
           <th>Price/Case</th>
-        </tr>
-      </thead>
-      <tbody>
-        {filteredData.map(item => (
-          <tr key={item.id}>
-            <td>{item.name}</td>
-            <td>{item.mrp}</td>
-            <td>{calculatePricePerPiece(item)}</td>
-            <td>{calculatePricePerOuter(item)}</td>
-            <td>{calculatePricePerCase(item)}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-    <br/>
-      <br/>
-      <h3>Details of Item after discount:</h3>
-      <input
-        type="number"
-        placeholder='0'
-        value={discount}
-        onChange={(e) => setDiscount(e.target.value)}
-        onKeyUp={handleEnterKey}
-      />
-      <button onClick={handleDiscount}>Apply Discount</button>
-      {showDiscount && 
-      <table>
-      <thead>
-        <tr>
-          <th>Item Name</th>
-          <th>MRP</th>
-          <th>Price/Piece</th>
-          <th>Price/Outer</th>
-          <th>Price/Case</th>
-          {/* <th>Quantity</th>
+          <th>Quantity</th>
           <th>IN</th>
-          <th>Add?</th> */}
+          <th>Add?</th>
         </tr>
       </thead>
       <tbody>
@@ -136,21 +160,32 @@ const DataComponent = ({ searchTerm }) => {
           <tr key={item.id}>
             <td>{item.name}</td>
             <td>{item.mrp}</td>
-            <td>{calculatePricePerPieceAfterDiscount(item)}</td>
-            <td>{calculatePricePerOuterAfterDiscount(item)}</td>
-            <td>{calculatePricePerCaseAfterDiscount(item)}</td>
-            {/* <td>
+            <td>
             <input
-           className='input_quantity'
-           type="number"
-           placeholder='0'
-           value={quantity[item.id] || ''}
-           onChange={(e) => handleQuantityChange(item.id, e.target.value)}
-         />
+              type="number"
+              placeholder='0'
+              min={0}
+              max={100}
+              value={discount[item.id] || 0}
+              onChange={(e) => handleDiscount(item.id,e.target.value)}
+           />
+            </td>
+            <td>{calculatePricePerPieceAfterDiscount(item,discount[item.id])}</td>
+            <td>{calculatePricePerOuterAfterDiscount(item,discount[item.id])}</td>
+            <td>{calculatePricePerCaseAfterDiscount(item,discount[item.id])}</td>
+            <td>
+            <input
+              className='input_quantity'
+              type="number"
+              min={0}
+              placeholder='0'
+              value={quantity[item.id] || ''}
+              onChange={(e) => handleQuantityChange(item.id, e.target.value)}
+            />
          </td>
          <td>
          <label>
-           <select className='custom_select' value={option[item.id] || ''} onChange={(e) => handleOptionChange(item.id, e.target.value)}>
+           <select className='custom_select' value={option[item.id] || 'Box'} onChange={(e) => handleOptionChange(item.id, e.target.value)}>
              <option value="Box">Box</option>
              <option value="Outer">Outer</option>
              <option value="Piece">Piece</option>
@@ -158,12 +193,36 @@ const DataComponent = ({ searchTerm }) => {
          </label>
          </td>
          <td>
-         <button key={item.id} onClick={handleAddToList(item.id,quantity[item.id],option[item.id])}>Add to list</button>
-         </td> */}
+         <button key={item.id} onClick={()=>handleAddToList(item,quantity[item.id],option[item.id],calculatePricePerPieceAfterDiscount(item,discount[item.id]))}>Add to list</button>
+         </td>
           </tr>
         ))}
       </tbody>
-    </table>}
+    </table>
+
+    {createList &&
+    <div>
+    <h3>Final List created:</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Quantity in Pieces</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        {list.map(item => (
+          <tr key={item.id}>
+            <td>{item.name}</td>
+            <td>{item.quantity}</td>
+            <td>{item.amount}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <ExcelCreation data={list}/>
+    </div>}
     </div>
   )
 }

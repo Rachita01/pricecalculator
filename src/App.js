@@ -1,8 +1,12 @@
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import './App.css';
 import DataComponent from './components/DataComponent/DataComponent';
 
 function App() {
+  useEffect(() => {
+    console.log("Use effect ran for clearance")
+    localStorage.clear()
+  },[])
   const [searchTerm,setSearchTerm] = useState(""); 
   const [showDataComponent, setShowDataComponent] = useState(false); 
 
