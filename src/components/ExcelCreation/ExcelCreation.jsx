@@ -9,17 +9,24 @@ const ExcelCreation = ({ data }) => {
     const workbook = XLSX.utils.book_new();
 
     // Provide headers manually
-    const headers = ['Name', 'Quantity', 'Amount'];
+    // const headers = ['Sr.','Product','ICODE','Batch','MRP','Cs','Out','Unts','Qty','Amt','Kg.','Schm','Schm%','StarDisc.','CasePack','OutPack'];
+    const headers = ['Name','Quantity','Amount'];
 
     // Create a worksheet and add headers
     const headerRow = [headers];
-    const worksheet = XLSX.utils.aoa_to_sheet(headerRow);
+    const worksheet = XLSX.utils.aoa_to_sheet([[`${name}`]]);
+    const mergeCell = { s: { r: 0, c: 0 }, e: { r: 0, c: headers.length - 1 } };
+    worksheet['!merges'] = [mergeCell];
+    const style = { alignment: { horizontal: 'center', vertical: 'center' } };
+    worksheet['A1'].s = style;
+    XLSX.utils.sheet_add_aoa(worksheet,headerRow , { origin: -1});
 
     // Convert your data to an array of arrays
-    const dataArray = data.map(item => [item.name, item.quantity, item.amount]);
+    // const dataArray = data.map((item,index) => [index+1,item.name,1,1,item.mrp,1,1,1,item.quantity, item.amount,1,1,1,1,1,1]);
+    const dataArray = data.map(item => [item.name,item.quantity,item.amount]);
 
     // Add data rows to the worksheet
-    XLSX.utils.sheet_add_aoa(worksheet, dataArray, { origin: 'A2' });
+    XLSX.utils.sheet_add_aoa(worksheet, dataArray, { origin: 'A3' });
 
     // Append the worksheet to the workbook
     XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');

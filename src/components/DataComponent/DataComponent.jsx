@@ -1,11 +1,12 @@
 import React,{useState,useEffect} from 'react'
-import ExcelCreation from '../ExcelCreation';
+import ExcelCreation from '../ExcelCreation/ExcelCreation';
 
 const DataComponent = ({ searchTerm }) => {
     const [data, setData] = useState([]);
     const [discount,setDiscount] =  useState(0);
     const [quantity,setQuantity] = useState(0);
     const [option,setOption] = useState("");
+    const [amount,setAmount] = useState(0);
     const [list,setList] = useState(()=> {
       const storedList = localStorage.getItem('list');
       return storedList ? JSON.parse(storedList) : [];
@@ -13,8 +14,10 @@ const DataComponent = ({ searchTerm }) => {
     const [createList,setCreateList] = useState(false);
       useEffect(() => {
         localStorage.setItem('list', JSON.stringify(list));
+        setAmount((list.map(item => Number(item.amount)).reduce((acc,cum) => acc+cum,0)).toFixed(2))
+        console.log(amount);
         console.log(list)
-      }, [list]);
+      }, [list,amount]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -102,7 +105,7 @@ const DataComponent = ({ searchTerm }) => {
     }));
   };
 
-  const handleAddToList = (item,quantity,option,price) => {
+  const handleAddToList = (item,quantity,option,price,discount) => {
 
     const itemIndex = list.findIndex(existItem => existItem.name === item.name);
     if (itemIndex !== -1) {
@@ -131,9 +134,10 @@ const DataComponent = ({ searchTerm }) => {
      var new_obj = {
       name:item.name,
       quantity:QuantityInPieces,
-      amount:TotalAmount
+      amount:TotalAmount,
+      discount:discount
      }
-     console.log(item,quantity,option,price,QuantityInPieces,TotalAmount)
+     console.log(item,quantity,option,price,QuantityInPieces,TotalAmount,discount)
      console.log(new_obj);
      setList((prevList) => [...prevList,new_obj]);
      setCreateList(true);
@@ -146,7 +150,7 @@ const DataComponent = ({ searchTerm }) => {
         <tr>
           <th>Item Name</th>
           <th>MRP</th>
-          <th>Apply Discount</th>
+          <th>Discount%</th>
           <th>Price/Piece</th>
           <th>Price/Outer</th>
           <th>Price/Case</th>
@@ -193,7 +197,7 @@ const DataComponent = ({ searchTerm }) => {
          </label>
          </td>
          <td>
-         <button key={item.id} onClick={()=>handleAddToList(item,quantity[item.id],option[item.id],calculatePricePerPieceAfterDiscount(item,discount[item.id]))}>Add to list</button>
+         <button key={item.id} onClick={()=>handleAddToList(item,quantity[item.id],option[item.id],calculatePricePerPieceAfterDiscount(item,discount[item.id]),discount[item.id])}>Add to list</button>
          </td>
           </tr>
         ))}
@@ -209,6 +213,7 @@ const DataComponent = ({ searchTerm }) => {
           <th>Name</th>
           <th>Quantity in Pieces</th>
           <th>Amount</th>
+          <th>Discount%</th>
         </tr>
       </thead>
       <tbody>
@@ -217,10 +222,12 @@ const DataComponent = ({ searchTerm }) => {
             <td>{item.name}</td>
             <td>{item.quantity}</td>
             <td>{item.amount}</td>
+            <td>{item.discount}</td>
           </tr>
         ))}
       </tbody>
     </table>
+    <h4>Total Amount in Final List:{amount}</h4>
     <ExcelCreation data={list}/>
     </div>}
     </div>
