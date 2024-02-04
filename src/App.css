@@ -58,3 +58,11 @@ p{
   width: 270px;
   padding-left: 25px;
 }
+
+.input_quantity{
+  width:4rem;
+}
+
+.custom_select{
+  height:2.1rem;
+}

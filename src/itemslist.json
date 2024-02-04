@@ -1,8 +1,1509 @@
 {
-  "items": [
-    {"id":1,"name": "cdm 10", "mrp": 10, "companymargin":2.0 ,"pieceinouter":10,"outerincase":20},
-    {"id":2,"name": "cdm 20", "mrp": 20, "companymargin":1.5 ,"pieceinouter":15,"outerincase":30},
-	  {"id":3,"name": "cdm 30", "mrp": 30, "companymargin":2.5 ,"pieceinouter":10,"outerincase":10},
-	  {"id":4,"name": "cdm 40", "mrp": 40, "companymargin":3.0 ,"pieceinouter":20,"outerincase":10}
-  ]
+  "items":
+[
+  {
+      "id": "1",
+      "name": "FST 3D 35RS 216PC 24U",
+      "mrp": "35",
+      "companymargin": "1.12",
+      "pieceinouter": "24",
+      "outerincase": "9"
+  },
+  {
+      "id": "2",
+      "name": "BV 5RS -864PC -12U",
+      "mrp": "5",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "864"
+  },
+  {
+      "id": "3",
+      "name": "CB CFC 5RS(120RS)-576PC-24U",
+      "mrp": "5",
+      "companymargin": "1.1",
+      "pieceinouter": "24",
+      "outerincase": "24"
+  },
+  {
+      "id": "4",
+      "name": "CDM 5RS -1728PC -72U",
+      "mrp": "5",
+      "companymargin": "1.1",
+      "pieceinouter": "72",
+      "outerincase": "24"
+  },
+  {
+      "id": "5",
+      "name": "FST 5RS -972PC -54U",
+      "mrp": "5",
+      "companymargin": "1.1",
+      "pieceinouter": "54",
+      "outerincase": "18"
+  },
+  {
+      "id": "6",
+      "name": "GEMS 5RS -1152PC -96U",
+      "mrp": "5",
+      "companymargin": "1.1",
+      "pieceinouter": "96",
+      "outerincase": "12"
+  },
+  {
+      "id": "7",
+      "name": "GEMS5RS -1296PC -108UNIT",
+      "mrp": "5",
+      "companymargin": "1.1",
+      "pieceinouter": "108",
+      "outerincase": "12"
+  },
+  {
+      "id": "8",
+      "name": "LOLY 5RS - 1152PC -48U",
+      "mrp": "5",
+      "companymargin": "1.1",
+      "pieceinouter": "48",
+      "outerincase": "24"
+  },
+  {
+      "id": "9",
+      "name": "CLOSED FST OREO 35RS -216PC -24U",
+      "mrp": "35",
+      "companymargin": "1.12",
+      "pieceinouter": "24",
+      "outerincase": "9"
+  },
+  {
+      "id": "10",
+      "name": "PERK 5RS -576PC -48U",
+      "mrp": "5",
+      "companymargin": "1.1",
+      "pieceinouter": "48",
+      "outerincase": "12"
+  },
+  {
+      "id": "11",
+      "name": "PERK 5RS -720PC -30U",
+      "mrp": "5",
+      "companymargin": "1.1",
+      "pieceinouter": "30",
+      "outerincase": "24"
+  },
+  {
+      "id": "12",
+      "name": "PERK 5RS -960PC -96U",
+      "mrp": "5",
+      "companymargin": "1.1",
+      "pieceinouter": "96",
+      "outerincase": "10"
+  },
+  {
+      "id": "13",
+      "name": "SHOTS 5RS -1152PC -64U",
+      "mrp": "5",
+      "companymargin": "1.1",
+      "pieceinouter": "56",
+      "outerincase": "18"
+  },
+  {
+      "id": "14",
+      "name": "TANG LEMON 5RS -360PC -12U",
+      "mrp": "5",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "360"
+  },
+  {
+      "id": "15",
+      "name": "TANG ORANGE 5RS -360PC -12U",
+      "mrp": "5",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "360"
+  },
+  {
+      "id": "16",
+      "name": "BV BIS 10RS -120PC -12U",
+      "mrp": "10",
+      "companymargin": "1.08",
+      "pieceinouter": "12",
+      "outerincase": "10"
+  },
+  {
+      "id": "17",
+      "name": "CB CAKE 10RS - 288PC -U6",
+      "mrp": "60",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "48"
+  },
+  {
+      "id": "18",
+      "name": "CB CAKE 10RS - 360PC -15U",
+      "mrp": "10",
+      "companymargin": "1.1",
+      "pieceinouter": "15",
+      "outerincase": "24"
+  },
+  {
+      "id": "19",
+      "name": "CB CFC 10RS -256PC -8U",
+      "mrp": "10",
+      "companymargin": "1.1",
+      "pieceinouter": "8",
+      "outerincase": "32"
+  },
+  {
+      "id": "20",
+      "name": "CB CFC 10RS 320PC -10U",
+      "mrp": "10",
+      "companymargin": "1.1",
+      "pieceinouter": "10",
+      "outerincase": "32"
+  },
+  {
+      "id": "21",
+      "name": "CDM 10RS -672PC -56U",
+      "mrp": "10",
+      "companymargin": "1.1",
+      "pieceinouter": "56",
+      "outerincase": "12"
+  },
+  {
+      "id": "22",
+      "name": "CRISPELLO 10RS -480PC -40U",
+      "mrp": "10",
+      "companymargin": "1.1",
+      "pieceinouter": "40",
+      "outerincase": "12"
+  },
+  {
+      "id": "23",
+      "name": "FST 10RS -480PC -40U",
+      "mrp": "10",
+      "companymargin": "1.1",
+      "pieceinouter": "40",
+      "outerincase": "12"
+  },
+  {
+      "id": "24",
+      "name": "GEMS 10RS -768PC -64U",
+      "mrp": "10",
+      "companymargin": "1.1",
+      "pieceinouter": "64",
+      "outerincase": "12"
+  },
+  {
+      "id": "25",
+      "name": "CLOSED OREO DIP 25RS 204PC 6U",
+      "mrp": "25",
+      "companymargin": "1.1",
+      "pieceinouter": "24",
+      "outerincase": "8"
+  },
+  {
+      "id": "26",
+      "name": "FST OREO 20 RS -288PC -24U",
+      "mrp": "20",
+      "companymargin": "1.12",
+      "pieceinouter": "24",
+      "outerincase": "12"
+  },
+  {
+      "id": "27",
+      "name": "PERK 10RS -360PC -30U",
+      "mrp": "10",
+      "companymargin": "1.1",
+      "pieceinouter": "30",
+      "outerincase": "12"
+  },
+  {
+      "id": "28",
+      "name": "SHOTS 10RS -576PC -48U",
+      "mrp": "10",
+      "companymargin": "1.1",
+      "pieceinouter": "48",
+      "outerincase": "12"
+  },
+  {
+      "id": "29",
+      "name": "CDM 20RS -480PC -40U",
+      "mrp": "20",
+      "companymargin": "1.12",
+      "pieceinouter": "40",
+      "outerincase": "12"
+  },
+  {
+      "id": "30",
+      "name": "FST 20RS -280PC -28U",
+      "mrp": "20",
+      "companymargin": "1.12",
+      "pieceinouter": "28",
+      "outerincase": "9"
+  },
+  {
+      "id": "31",
+      "name": "FST OREO 40RS 216PC - 24U",
+      "mrp": "40",
+      "companymargin": "1.12",
+      "pieceinouter": "24",
+      "outerincase": "9"
+  },
+  {
+      "id": "32",
+      "name": "FUSE 20RS -384PC-24U",
+      "mrp": "20",
+      "companymargin": "1.12",
+      "pieceinouter": "24",
+      "outerincase": "12"
+  },
+  {
+      "id": "33",
+      "name": "GEMS 20RS -360PC -12U",
+      "mrp": "20",
+      "companymargin": "1.12",
+      "pieceinouter": "24",
+      "outerincase": "8"
+  },
+  {
+      "id": "34",
+      "name": "HOT CHOCO 20RS -300PC -10U",
+      "mrp": "20",
+      "companymargin": "1.075",
+      "pieceinouter": "1",
+      "outerincase": "300"
+  },
+  {
+      "id": "35",
+      "name": "OREO 5RS -384PC -32U",
+      "mrp": "5",
+      "companymargin": "1.1",
+      "pieceinouter": "32",
+      "outerincase": "12"
+  },
+  {
+      "id": "36",
+      "name": "OREO CHOCO 10RS -120PC -12U",
+      "mrp": "10",
+      "companymargin": "1.1",
+      "pieceinouter": "12",
+      "outerincase": "10"
+  },
+  {
+      "id": "37",
+      "name": "OREO CHOCO 20RS -100PC",
+      "mrp": "20",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "100"
+  },
+  {
+      "id": "38",
+      "name": "BV 30RS -75G -192PC -12U",
+      "mrp": "30",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "192"
+  },
+  {
+      "id": "39",
+      "name": "CLOSED  CRISPELLO 30RS -168PC -28U",
+      "mrp": "30",
+      "companymargin": "1.12",
+      "pieceinouter": "28",
+      "outerincase": "6"
+  },
+  {
+      "id": "40",
+      "name": "CLOSED FST 3D 30RS -216PC -24U",
+      "mrp": "30",
+      "companymargin": "1.12",
+      "pieceinouter": "24",
+      "outerincase": "9"
+  },
+  {
+      "id": "41",
+      "name": "OREO CHOCO 35RS - 50PC",
+      "mrp": "35",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "50"
+  },
+  {
+      "id": "42",
+      "name": "BVFSM POUCH 255RS -32PC",
+      "mrp": "255",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "15"
+  },
+  {
+      "id": "43",
+      "name": "BVL CB 100RS -60PC -10U",
+      "mrp": "100",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "44",
+      "name": "BV BIS 35RS -50PC",
+      "mrp": "35",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "50"
+  },
+  {
+      "id": "45",
+      "name": "BVL CB 110RS -60PC - 10U",
+      "mrp": "110",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "46",
+      "name": "OREO GP CHOCO 100RS - 26PC",
+      "mrp": "100",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "26"
+  },
+  {
+      "id": "47",
+      "name": "BVL FN 100RS -60PC -10U",
+      "mrp": "100",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "48",
+      "name": "OREO GP VANILA 100RS 26PC",
+      "mrp": "100",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "26"
+  },
+  {
+      "id": "49",
+      "name": "OREO MOMENTS GP-150RS-12PC",
+      "mrp": "150",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "12"
+  },
+  {
+      "id": "50",
+      "name": "OREO STR 10RS -120PC -12U",
+      "mrp": "10",
+      "companymargin": "1.1",
+      "pieceinouter": "12",
+      "outerincase": "10"
+  },
+  {
+      "id": "51",
+      "name": "BVL FN 110RS -60PC -10U",
+      "mrp": "110",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "52",
+      "name": "BVL RC 110RS - 60PC - 10U",
+      "mrp": "110",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "53",
+      "name": "BVL RC 50RS - 384PC - 32PC",
+      "mrp": "50",
+      "companymargin": "1.12",
+      "pieceinouter": "32",
+      "outerincase": "12"
+  },
+  {
+      "id": "54",
+      "name": "OREO STR 30RS - 50PC",
+      "mrp": "30",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "50"
+  },
+  {
+      "id": "55",
+      "name": "BVL RR 110RS -60PC-10U",
+      "mrp": "110",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "56",
+      "name": "CAD ECLAIR COFFEE 120RS -36PC",
+      "mrp": "120",
+      "companymargin": "1.15",
+      "pieceinouter": "1",
+      "outerincase": "36"
+  },
+  {
+      "id": "57",
+      "name": "BV 45RS - 60PC -130G -6U",
+      "mrp": "45",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "60"
+  },
+  {
+      "id": "58",
+      "name": "BV 45RS - 96PC - 130G - 6U",
+      "mrp": "45",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "96"
+  },
+  {
+      "id": "59",
+      "name": "CAD ECLAIR COFFEE 200RS 18PC",
+      "mrp": "200",
+      "companymargin": "1.15",
+      "pieceinouter": "1",
+      "outerincase": "18"
+  },
+  {
+      "id": "60",
+      "name": "CAD ECLAIR GOLD 120RS -36PC",
+      "mrp": "120",
+      "companymargin": "1.15",
+      "pieceinouter": "1",
+      "outerincase": "36"
+  },
+  {
+      "id": "61",
+      "name": "CAD ECLAIR GOLD 200RS -18PC",
+      "mrp": "200",
+      "companymargin": "1.15",
+      "pieceinouter": "1",
+      "outerincase": "18"
+  },
+  {
+      "id": "62",
+      "name": "CAD ECLAIR GOLD 50RS -80PC -10U",
+      "mrp": "50",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "80"
+  },
+  {
+      "id": "63",
+      "name": "CAD ECLAIR GOLD JAR -1000RS -2PC",
+      "mrp": "1000",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "2"
+  },
+  {
+      "id": "64",
+      "name": "CAD ECLAIR GOLD JAR -224RS -16PC",
+      "mrp": "224",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "16"
+  },
+  {
+      "id": "65",
+      "name": "CAD ECLAIR JAR GOLD- 240RS -16PC",
+      "mrp": "240",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "16"
+  },
+  {
+      "id": "66",
+      "name": "CADECLAIRGOLD-230-16PC",
+      "mrp": "230",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "16"
+  },
+  {
+      "id": "67",
+      "name": "CB CAKE 70RS -48PC -U6",
+      "mrp": "70",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "48"
+  },
+  {
+      "id": "68",
+      "name": "CB CFC 80RS - 36PC",
+      "mrp": "80",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "36"
+  },
+  {
+      "id": "69",
+      "name": "CB CFC40RS - 72P",
+      "mrp": "40",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "72"
+  },
+  {
+      "id": "70",
+      "name": "CDM 100RS -80PC -10U",
+      "mrp": "100",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "8"
+  },
+  {
+      "id": "71",
+      "name": "CDM 40RS -240PC -30U",
+      "mrp": "40",
+      "companymargin": "1.12",
+      "pieceinouter": "30",
+      "outerincase": "8"
+  },
+  {
+      "id": "72",
+      "name": "CDM FN 45RS -360PC -40U",
+      "mrp": "45",
+      "companymargin": "1.12",
+      "pieceinouter": "40",
+      "outerincase": "9"
+  },
+  {
+      "id": "73",
+      "name": "CDM FN 90RS -150PC -15U",
+      "mrp": "90",
+      "companymargin": "1.12",
+      "pieceinouter": "15",
+      "outerincase": "10"
+  },
+  {
+      "id": "74",
+      "name": "CDM HT 149RS -48PC",
+      "mrp": "149",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "48"
+  },
+  {
+      "id": "75",
+      "name": "BITES ALMOND 75RS -80PC -10U",
+      "mrp": "75",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "8"
+  },
+  {
+      "id": "76",
+      "name": "BITES HAZELNUT 75RS -80PC -10U",
+      "mrp": "75",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "8"
+  },
+  {
+      "id": "77",
+      "name": "CDM NUTTY KULFI 45RS 360PC - 40UNIT",
+      "mrp": "45",
+      "companymargin": "1.12",
+      "pieceinouter": "40",
+      "outerincase": "9"
+  },
+  {
+      "id": "78",
+      "name": "CDM RA 45RS -360PC 40U",
+      "mrp": "45",
+      "companymargin": "1.12",
+      "pieceinouter": "40",
+      "outerincase": "9"
+  },
+  {
+      "id": "79",
+      "name": "CDM RA 90RS -150PC -15U",
+      "mrp": "90",
+      "companymargin": "1.12",
+      "pieceinouter": "15",
+      "outerincase": "10"
+  },
+  {
+      "id": "80",
+      "name": "CDM TANGY MANGO 45RS 360PC -40U",
+      "mrp": "45",
+      "companymargin": "1.12",
+      "pieceinouter": "40",
+      "outerincase": "9"
+  },
+  {
+      "id": "81",
+      "name": "CELEB 100RS -40PC -5U",
+      "mrp": "100",
+      "companymargin": "1.1",
+      "pieceinouter": "5",
+      "outerincase": "8"
+  },
+  {
+      "id": "82",
+      "name": "CELEB 150RS -30PC -5U",
+      "mrp": "150",
+      "companymargin": "1.12",
+      "pieceinouter": "5",
+      "outerincase": "6"
+  },
+  {
+      "id": "83",
+      "name": "CELEB 200RS-24PC",
+      "mrp": "200",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "24"
+  },
+  {
+      "id": "84",
+      "name": "CELEB 300RS - 20PC",
+      "mrp": "300",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "20"
+  },
+  {
+      "id": "85",
+      "name": "CELEB 350RS SILK - 12PC",
+      "mrp": "350",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "12"
+  },
+  {
+      "id": "86",
+      "name": "OREO STR 35RS -50PC",
+      "mrp": "35",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "50"
+  },
+  {
+      "id": "87",
+      "name": "CELEB 50RS -96PC -8U",
+      "mrp": "50",
+      "companymargin": "1.1",
+      "pieceinouter": "8",
+      "outerincase": "12"
+  },
+  {
+      "id": "88",
+      "name": "CELEB 550RS -RDFC - 24PC",
+      "mrp": "550",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "24"
+  },
+  {
+      "id": "89",
+      "name": "OREO VANILA 10RS -120PC -12U",
+      "mrp": "10",
+      "companymargin": "1.1",
+      "pieceinouter": "12",
+      "outerincase": "10"
+  },
+  {
+      "id": "90",
+      "name": "CELEB 575RS - 20 PC",
+      "mrp": "575",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "20"
+  },
+  {
+      "id": "91",
+      "name": "CELEB SILK 475RS - 32PC",
+      "mrp": "475",
+      "companymargin": "1.12",
+      "pieceinouter": "4",
+      "outerincase": "8"
+  },
+  {
+      "id": "92",
+      "name": "CELEB TB 500RS - 10PC",
+      "mrp": "500",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "10"
+  },
+  {
+      "id": "93",
+      "name": "CELEB TB-275RS- 12PC",
+      "mrp": "275",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "12"
+  },
+  {
+      "id": "94",
+      "name": "CLOSED BVL RC 100RS -60PC -10U",
+      "mrp": "100",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "95",
+      "name": "CLOSED CB CFC 170RS -300G -24PC",
+      "mrp": "170",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "24"
+  },
+  {
+      "id": "96",
+      "name": "OREO VANILA 35RS 50PC",
+      "mrp": "35",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "50"
+  },
+  {
+      "id": "97",
+      "name": "CLOSED CB CFC 70RS - 36PC",
+      "mrp": "70",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "36"
+  },
+  {
+      "id": "98",
+      "name": "CLOSED CB CHIPS 40RS -83G -75PC",
+      "mrp": "40",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "75"
+  },
+  {
+      "id": "99",
+      "name": "CLOSED CB CHIPS 80RS -167G -36PC",
+      "mrp": "80",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "36"
+  },
+  {
+      "id": "100",
+      "name": "CLOSED DM CRUNCHY COLA 45RS 360PC 40U",
+      "mrp": "45",
+      "companymargin": "1.12",
+      "pieceinouter": "40",
+      "outerincase": "9"
+  },
+  {
+      "id": "101",
+      "name": "CLOSED FUSE 35RS -216PC -24U",
+      "mrp": "35",
+      "companymargin": "1.12",
+      "pieceinouter": "24",
+      "outerincase": "9"
+  },
+  {
+      "id": "102",
+      "name": "CLOSED SILK PLAIN 75RS -192PC -32U",
+      "mrp": "75",
+      "companymargin": "1.12",
+      "pieceinouter": "32",
+      "outerincase": "6"
+  },
+  {
+      "id": "103",
+      "name": "CLOSED TEMP RR 100RS 60PC 10U",
+      "mrp": "100",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "104",
+      "name": "COCOA 255RS - 60PC",
+      "mrp": "255",
+      "companymargin": "1.075",
+      "pieceinouter": "1",
+      "outerincase": "60"
+  },
+  {
+      "id": "105",
+      "name": "COCOA 265RS - 60PC",
+      "mrp": "265",
+      "companymargin": "1.075",
+      "pieceinouter": "1",
+      "outerincase": "60"
+  },
+  {
+      "id": "106",
+      "name": "OREO VANILLA 20RS-100PC",
+      "mrp": "20",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "100"
+  },
+  {
+      "id": "107",
+      "name": "SILK OREO 185RS -72PC -12U",
+      "mrp": "185",
+      "companymargin": "1.12",
+      "pieceinouter": "12",
+      "outerincase": "6"
+  },
+  {
+      "id": "108",
+      "name": "CRACKLE 45RS -360PC -40U",
+      "mrp": "45",
+      "companymargin": "1.12",
+      "pieceinouter": "40",
+      "outerincase": "9"
+  },
+  {
+      "id": "109",
+      "name": "CRISPELLO 35RS- 224PC - 28U",
+      "mrp": "35",
+      "companymargin": "1.12",
+      "pieceinouter": "28",
+      "outerincase": "8"
+  },
+  {
+      "id": "110",
+      "name": "ECLAIR GP 140RS - 24PC",
+      "mrp": "140",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "24"
+  },
+  {
+      "id": "111",
+      "name": "FST HT 149RS -48PC",
+      "mrp": "149",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "48"
+  },
+  {
+      "id": "112",
+      "name": "FUSE 40RS - 216PC - 24U",
+      "mrp": "40",
+      "companymargin": "1.12",
+      "pieceinouter": "24",
+      "outerincase": "9"
+  },
+  {
+      "id": "113",
+      "name": "FUSE FIT CB 50RS -216PC -24U",
+      "mrp": "50",
+      "companymargin": "1.12",
+      "pieceinouter": "24",
+      "outerincase": "9"
+  },
+  {
+      "id": "114",
+      "name": "FUSE HT - 120RS - 60PC",
+      "mrp": "120",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "60"
+  },
+  {
+      "id": "115",
+      "name": "GEMS 45RS -108PC -12U",
+      "mrp": "45",
+      "companymargin": "1.12",
+      "pieceinouter": "12",
+      "outerincase": "9"
+  },
+  {
+      "id": "116",
+      "name": "GEMS 50RS- 108PC - 12U",
+      "mrp": "50",
+      "companymargin": "1.12",
+      "pieceinouter": "12",
+      "outerincase": "9"
+  },
+  {
+      "id": "117",
+      "name": "GEMS HT 100RS -48PC",
+      "mrp": "100",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "48"
+  },
+  {
+      "id": "118",
+      "name": "HALLS JAR 112RS -24PC",
+      "mrp": "112",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "24"
+  },
+  {
+      "id": "119",
+      "name": "HALLS JAR 252RS - 12PC",
+      "mrp": "252",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "12"
+  },
+  {
+      "id": "120",
+      "name": "HALLS POUCH 115RS - 32PC",
+      "mrp": "115",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "32"
+  },
+  {
+      "id": "121",
+      "name": "BV 200G 125RS - 30PC",
+      "mrp": "125",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "30"
+  },
+  {
+      "id": "122",
+      "name": "BV 200G 128RS - 30PC",
+      "mrp": "128",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "30"
+  },
+  {
+      "id": "123",
+      "name": "HOT CHOCO 210RS 60PC",
+      "mrp": "210",
+      "companymargin": "1.075",
+      "pieceinouter": "1",
+      "outerincase": "60"
+  },
+  {
+      "id": "124",
+      "name": "HOT CHOCO 220RS -60PC",
+      "mrp": "220",
+      "companymargin": "1.075",
+      "pieceinouter": "1",
+      "outerincase": "60"
+  },
+  {
+      "id": "125",
+      "name": "HOT CHOCO 230RS - 60PC",
+      "mrp": "230",
+      "companymargin": "1.075",
+      "pieceinouter": "1",
+      "outerincase": "60"
+  },
+  {
+      "id": "126",
+      "name": "LICKABLES 45RS -108PC -12U",
+      "mrp": "45",
+      "companymargin": "1.12",
+      "pieceinouter": "12",
+      "outerincase": "9"
+  },
+  {
+      "id": "127",
+      "name": "SILK OREO 195RS(NEW) -72PC -12U",
+      "mrp": "195",
+      "companymargin": "1.12",
+      "pieceinouter": "12",
+      "outerincase": "6"
+  },
+  {
+      "id": "128",
+      "name": "NUTTIES 40RS -192PC -24U",
+      "mrp": "40",
+      "companymargin": "1.12",
+      "pieceinouter": "24",
+      "outerincase": "8"
+  },
+  {
+      "id": "129",
+      "name": "NUTTIES 45RS -192PC 24U",
+      "mrp": "45",
+      "companymargin": "1.12",
+      "pieceinouter": "24",
+      "outerincase": "8"
+  },
+  {
+      "id": "130",
+      "name": "PERK HT 99RS -32PC",
+      "mrp": "99",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "32"
+  },
+  {
+      "id": "131",
+      "name": "SHOTS 2RS(116RS) -50PC",
+      "mrp": "116",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "50"
+  },
+  {
+      "id": "132",
+      "name": "SILK (VAL) 335RS -40PC -10U",
+      "mrp": "335",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "4"
+  },
+  {
+      "id": "133",
+      "name": "SILK 450RS - 20PC",
+      "mrp": "450",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "2"
+  },
+  {
+      "id": "134",
+      "name": "SILK BUBBLY 185RS -60PC -10U",
+      "mrp": "185",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "135",
+      "name": "SILK BUBBLY -195RS(NEW) -60PC-10U",
+      "mrp": "195",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "136",
+      "name": "SILK BUBBLY 85RS -120PC -20U",
+      "mrp": "85",
+      "companymargin": "1.12",
+      "pieceinouter": "20",
+      "outerincase": "6"
+  },
+  {
+      "id": "137",
+      "name": "SILK BUBBLY 90RS (VAL) -120PC-20U",
+      "mrp": "90",
+      "companymargin": "1.12",
+      "pieceinouter": "20",
+      "outerincase": "6"
+  },
+  {
+      "id": "138",
+      "name": "SILK OREO 85RS -192PC -32U",
+      "mrp": "85",
+      "companymargin": "1.12",
+      "pieceinouter": "32",
+      "outerincase": "6"
+  },
+  {
+      "id": "139",
+      "name": "SILK FN 185RS -60PC -10U",
+      "mrp": "185",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "140",
+      "name": "SILK OREO -90RS(NEW) -192PC -32U",
+      "mrp": "90",
+      "companymargin": "1.12",
+      "pieceinouter": "32",
+      "outerincase": "6"
+  },
+  {
+      "id": "141",
+      "name": "SILK FN 195RS (NEW) -60PC-10U",
+      "mrp": "195",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "142",
+      "name": "SILK FN 85RS -180PC -30U",
+      "mrp": "85",
+      "companymargin": "1.12",
+      "pieceinouter": "30",
+      "outerincase": "6"
+  },
+  {
+      "id": "143",
+      "name": "SILK FN 90RS(NEW)-180PC-30U",
+      "mrp": "90",
+      "companymargin": "1.12",
+      "pieceinouter": "30",
+      "outerincase": "6"
+  },
+  {
+      "id": "144",
+      "name": "SILK GANACHE 185RS - 60PC - 10U",
+      "mrp": "185",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "145",
+      "name": "SILK OREO RV 185RS 72PC 12U",
+      "mrp": "185",
+      "companymargin": "1.12",
+      "pieceinouter": "12",
+      "outerincase": "6"
+  },
+  {
+      "id": "146",
+      "name": "SILK GANACHE 195RS(NEW) - 60PC - 10U",
+      "mrp": "195",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "147",
+      "name": "SILK GANACHE 85RS - 192PC-32U",
+      "mrp": "85",
+      "companymargin": "1.12",
+      "pieceinouter": "32",
+      "outerincase": "6"
+  },
+  {
+      "id": "148",
+      "name": "SILK GANACHE 90RS(NEW) -192PC -32U",
+      "mrp": "90",
+      "companymargin": "1.12",
+      "pieceinouter": "32",
+      "outerincase": "6"
+  },
+  {
+      "id": "149",
+      "name": "SILK HAZELNUT 185RS -60PC -10U",
+      "mrp": "185",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "150",
+      "name": "SILK HAZELNUT 195RS(NEW) -60PC-10U",
+      "mrp": "195",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "151",
+      "name": "SILK HAZELNUT 85RS -180PC -30U",
+      "mrp": "85",
+      "companymargin": "1.12",
+      "pieceinouter": "30",
+      "outerincase": "6"
+  },
+  {
+      "id": "152",
+      "name": "SILK HAZELNUT 90RS (NEW)-180PC -30U",
+      "mrp": "90",
+      "companymargin": "1.12",
+      "pieceinouter": "30",
+      "outerincase": "6"
+  },
+  {
+      "id": "153",
+      "name": "SILK HT 200RS -48PC",
+      "mrp": "200",
+      "companymargin": "1.12",
+      "pieceinouter": "1",
+      "outerincase": "48"
+  },
+  {
+      "id": "154",
+      "name": "SILK MOUSSE 185RS -72PC -12U",
+      "mrp": "185",
+      "companymargin": "1.12",
+      "pieceinouter": "12",
+      "outerincase": "6"
+  },
+  {
+      "id": "155",
+      "name": "SILK MOUSSE 199RS (VAL) - 90PC - 10U",
+      "mrp": "199",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "9"
+  },
+  {
+      "id": "156",
+      "name": "CLOSED BV 500G POUCH 230RS -32PC",
+      "mrp": "230",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "32"
+  },
+  {
+      "id": "157",
+      "name": "SILK MOUSSE 85RS -144PC -24U",
+      "mrp": "85",
+      "companymargin": "1.12",
+      "pieceinouter": "24",
+      "outerincase": "6"
+  },
+  {
+      "id": "158",
+      "name": "BV 500G POUCH - 233RS - 32PC",
+      "mrp": "233",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "32"
+  },
+  {
+      "id": "159",
+      "name": "BV 1KG POUCH -239RS -32PC",
+      "mrp": "239",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "32"
+  },
+  {
+      "id": "160",
+      "name": "SILK PLAIN 175RS 60PC -10U",
+      "mrp": "175",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "161",
+      "name": "CLOSED BV 500G JAR 245RS -15PC",
+      "mrp": "245",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "15"
+  },
+  {
+      "id": "162",
+      "name": "BV 500G JAR 249RS - 15PC",
+      "mrp": "249",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "15"
+  },
+  {
+      "id": "163",
+      "name": "BV FSM 500G POUCH 250RS 32PC",
+      "mrp": "250",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "32"
+  },
+  {
+      "id": "164",
+      "name": "SILK PLAIN 180RS (VAL)-60PC-10U",
+      "mrp": "180",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "165",
+      "name": "BV 500G JAR 255RS - 15PC",
+      "mrp": "255",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "15"
+  },
+  {
+      "id": "166",
+      "name": "SILK PLAIN 80RS - 192PC - 32U",
+      "mrp": "80",
+      "companymargin": "1.12",
+      "pieceinouter": "32",
+      "outerincase": "6"
+  },
+  {
+      "id": "167",
+      "name": "SILK PLAIN RS85 (NEW)-192PC -32U",
+      "mrp": "85",
+      "companymargin": "1.12",
+      "pieceinouter": "32",
+      "outerincase": "6"
+  },
+  {
+      "id": "168",
+      "name": "SILK RA (NEW) 195RS-60PC -10U",
+      "mrp": "195",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "169",
+      "name": "SILK RA 185RS 60PC 10U",
+      "mrp": "185",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "170",
+      "name": "BV FSM 500 JAR 280RS - 15PC",
+      "mrp": "280",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "15"
+  },
+  {
+      "id": "171",
+      "name": "SILK OREO RV 85RS -192PC -32U",
+      "mrp": "85",
+      "companymargin": "1.12",
+      "pieceinouter": "32",
+      "outerincase": "6"
+  },
+  {
+      "id": "172",
+      "name": "SILK RA 85RS -180PC -30U",
+      "mrp": "85",
+      "companymargin": "1.12",
+      "pieceinouter": "30",
+      "outerincase": "6"
+  },
+  {
+      "id": "173",
+      "name": "BV LIL 500GM -335RS -15PC",
+      "mrp": "335",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "15"
+  },
+  {
+      "id": "174",
+      "name": "SILK RA -90RS (NEW)-180PC -30U",
+      "mrp": "90",
+      "companymargin": "1.12",
+      "pieceinouter": "30",
+      "outerincase": "6"
+  },
+  {
+      "id": "175",
+      "name": "BV LIL 500GM -341RS -15PC",
+      "mrp": "341",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "15"
+  },
+  {
+      "id": "176",
+      "name": "TANG LEMON 150RS 500G -24PC",
+      "mrp": "150",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "24"
+  },
+  {
+      "id": "177",
+      "name": "BV 1KG POUCH 425RS 12PC",
+      "mrp": "425",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "12"
+  },
+  {
+      "id": "178",
+      "name": "BV 1KG POUCH 432RS -12PC",
+      "mrp": "432",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "12"
+  },
+  {
+      "id": "179",
+      "name": "BV 1KG POUCH 442RS 12PC",
+      "mrp": "442",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "12"
+  },
+  {
+      "id": "180",
+      "name": "CLOSED BV 1KG JAR 450RS 8PC",
+      "mrp": "450",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "8"
+  },
+  {
+      "id": "181",
+      "name": "TANG MANGO 30RS -96PC -12U",
+      "mrp": "30",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "96"
+  },
+  {
+      "id": "182",
+      "name": "BV 1KG JAR 458RS- 8PC",
+      "mrp": "458",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "8"
+  },
+  {
+      "id": "183",
+      "name": "TANG ORANGE 150RS 500G -24PC",
+      "mrp": "150",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "24"
+  },
+  {
+      "id": "184",
+      "name": "BV 1KG JAR -479RS -8PC",
+      "mrp": "479",
+      "companymargin": "1.08",
+      "pieceinouter": "1",
+      "outerincase": "8"
+  },
+  {
+      "id": "185",
+      "name": "TANG ORANGE 30RS -96PC -12U",
+      "mrp": "30",
+      "companymargin": "1.1",
+      "pieceinouter": "1",
+      "outerincase": "96"
+  },
+  {
+      "id": "186",
+      "name": "TEMP AT 100RS 60PC 10U",
+      "mrp": "100",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "187",
+      "name": "TEMP AT 110RS- 60PC -10U",
+      "mrp": "110",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  },
+  {
+      "id": "188",
+      "name": "TEMP RR 110RS - 60PC 10U",
+      "mrp": "110",
+      "companymargin": "1.12",
+      "pieceinouter": "10",
+      "outerincase": "6"
+  }
+]
 }
