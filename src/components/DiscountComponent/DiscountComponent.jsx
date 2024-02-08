@@ -3,6 +3,8 @@ import React,{useState,useEffect} from 'react'
 function DiscountComponent(props) {
     const [data, setData] = useState([]);
     const [pricegiven,setPriceGiven] = useState(0);
+    const [piecePrice,setPiecePrice] = useState(0);
+    const [outerPrice,setOuterPrice] = useState(0);
     const [discount,setDiscount] = useState(0);
     console.log(props.searchTerm);
     useEffect(() => {
@@ -37,7 +39,30 @@ function DiscountComponent(props) {
         return ((item.mrp * item.pieceinouter * item.outerincase)/item.companymargin).toFixed(4)
       }
 
+      const handlePiecePrice = (itemId,price,priceperpiece) =>{
+        console.log(price,priceperpiece);
+        setPiecePrice((prevPrice) => ({
+          ...prevPrice,
+          [itemId]: price,
+        }));
+        const newData = filteredData.filter(item => item.id === itemId);
+        console.log(newData);
+        setDiscount((((priceperpiece - price)/priceperpiece) * 100).toFixed(2))
+      };
+
+      const handleOuterPrice = (itemId,price,priceperouter) =>{
+        console.log(price,priceperouter)
+        setOuterPrice((prevPrice) => ({
+          ...prevPrice,
+          [itemId]: price,
+        }));
+        const newData = filteredData.filter(item => item.id === itemId);
+        console.log(newData);
+        setDiscount((((priceperouter - price)/priceperouter) * 100).toFixed(2))
+      };
+
       const handlePriceGiven = (itemId,price,pricepercase) =>{
+        console.log(price,pricepercase)
           setPriceGiven((prevPrice) => ({
             ...prevPrice,
             [itemId]: price,
@@ -56,6 +81,7 @@ function DiscountComponent(props) {
           <th>Price/Piece</th>
           <th>Price/Outer</th>
           <th>Price/Case</th>
+          <th>Discount</th>
         </tr>
       </thead>
       <tbody>
@@ -65,13 +91,15 @@ function DiscountComponent(props) {
             <td>
             <div>
                 <span>{calculatePricePerPiece(item)}</span>
-                <input type="number" className='inputClass' min={0}/>
+                <input type="number" className='inputClass' min={0} value={piecePrice[item.id] || ''}
+                onChange={(e) => handlePiecePrice(item.id, e.target.value,calculatePricePerPiece(item))}/>
             </div>
                 </td>
             <td>
             <div>
                 <span>{calculatePricePerOuter(item)}</span>
-                <input type="number" className='inputClass' min={0}/>
+                <input type="number" className='inputClass' min={0} value={outerPrice[item.id] || ''}
+                onChange={(e) => handleOuterPrice(item.id, e.target.value,calculatePricePerOuter(item))}/>
             </div>
             </td>
             <td>
@@ -80,6 +108,9 @@ function DiscountComponent(props) {
                 <input type="number" className='inputClass' min={0} value={pricegiven[item.id] || ''}
               onChange={(e) => handlePriceGiven(item.id, e.target.value,calculatePricePerCase(item))}/>
             </div>
+            </td>
+            <td>
+              {discount}%
             </td>
             </tr>
             ))}

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import * as XLSX from 'xlsx';
 // import { saveAs } from 'file-saver';
 
-const ExcelCreation = ({ data }) => {
+const ExcelCreation = ({ data,amount }) => {
   const [name,setName] = useState("");
   const handleDownload = () => {
     // Create a new workbook
@@ -28,6 +28,8 @@ const ExcelCreation = ({ data }) => {
     // Add data rows to the worksheet
     XLSX.utils.sheet_add_aoa(worksheet, dataArray, { origin: 'A3' });
 
+    const totalRow = ['Total Amount', '', amount];
+  XLSX.utils.sheet_add_aoa(worksheet, [totalRow], { origin: -1 });
     // Append the worksheet to the workbook
     XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
 

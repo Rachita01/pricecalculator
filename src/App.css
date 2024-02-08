@@ -9,6 +9,9 @@ table,th,td,tr{
   border: 1px solid black;
   font-size: 18px;
 }
+table{
+  margin-top: 3vh;
+}
 
 th{
   background-color: lightseagreen;
@@ -103,4 +106,5 @@ p{
   width:90px;
   margin-top: 6%;
   border: 1px solid black;
+  text-align: center;
 }

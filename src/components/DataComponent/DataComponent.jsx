@@ -131,11 +131,14 @@ const DataComponent = ({ searchTerm }) => {
       TotalAmount = (QuantityInPieces * price).toFixed(2);
      }
 
+     const NumberOfCases = (QuantityInPieces/(item.outerincase * item.pieceinouter)).toFixed(2);
+
      var new_obj = {
       name:item.name,
       quantity:QuantityInPieces,
       amount:TotalAmount,
-      discount:discount
+      discount:discount,
+      numberOfCases:NumberOfCases
      }
      console.log(item,quantity,option,price,QuantityInPieces,TotalAmount,discount)
      console.log(new_obj);
@@ -212,6 +215,7 @@ const DataComponent = ({ searchTerm }) => {
         <tr>
           <th>Name</th>
           <th>Quantity in Pieces</th>
+          <th>Number of Cases</th>
           <th>Amount</th>
           <th>Discount%</th>
         </tr>
@@ -221,6 +225,7 @@ const DataComponent = ({ searchTerm }) => {
           <tr key={item.id}>
             <td>{item.name}</td>
             <td>{item.quantity}</td>
+            <td>{item.numberOfCases}</td>
             <td>{item.amount}</td>
             <td>{item.discount}</td>
           </tr>
@@ -228,7 +233,7 @@ const DataComponent = ({ searchTerm }) => {
       </tbody>
     </table>
     <h4>Total Amount in Final List:{amount}</h4>
-    <ExcelCreation data={list}/>
+    <ExcelCreation data={list} amount={amount}/>
     </div>}
     </div>
   )
