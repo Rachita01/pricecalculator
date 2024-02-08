@@ -47,7 +47,7 @@ input{
 
 button{
   background-color:darkturquoise;
-  height: 35px;
+  height:fit-content;
   font-size: 17px;
 }
 
@@ -65,4 +65,42 @@ p{
 
 .custom_select{
   height:2.1rem;
+}
+
+.discountbutton{
+  float: right;
+  width:fit-content;
+}
+
+.inputClass{
+  margin-right: 0px;
+  width: 90%;
+  margin-bottom: 1.5%;
+}
+
+.displayClass{
+  display: flex;
+    flex-direction: row;
+    width: 35%;
+    justify-content: flex-end;
+}
+
+.container-discount{
+  display: flex;
+  flex-direction: row;
+}
+
+.displayClass{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: -50px;
+}
+
+.displayDiscount{
+  position: absolute;
+  height:30px;
+  width:90px;
+  margin-top: 6%;
+  border: 1px solid black;
 }
