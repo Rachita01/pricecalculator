@@ -84,7 +84,12 @@ const DataComponent = ({ searchTerm }) => {
      return <p>Data not found!!!<br/> Please provide valid value</p>
   }
 
-CC
+  const handleQuantityChange = (itemId, newValue) => {
+    setQuantity((prevQuantities) => ({
+      ...prevQuantities,
+      [itemId]: newValue,
+    }));
+  };
 
   const handleOptionChange = (itemId, newValue) => {
     setOption((prevOption) => ({
