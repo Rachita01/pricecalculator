@@ -58,14 +58,6 @@
         "outerincase": "24"
     },
     {
-        "id": "9",
-        "name": "CLOSED FST OREO 35RS -216PC -24U",
-        "mrp": "35",
-        "companymargin": "1.12",
-        "pieceinouter": "24",
-        "outerincase": "9"
-    },
-    {
         "id": "10",
         "name": "PERK 5RS -576PC -48U",
         "mrp": "5",
@@ -231,15 +223,15 @@
         "mrp": "20",
         "companymargin": "1.12",
         "pieceinouter": "24",
-        "outerincase": "12"
+        "outerincase": "16"
     },
     {
         "id": "33",
         "name": "GEMS 20RS -360PC -12U",
         "mrp": "20",
         "companymargin": "1.12",
-        "pieceinouter": "24",
-        "outerincase": "20"
+        "pieceinouter": "12",
+        "outerincase": "30"
     },
     {
         "id": "34",
@@ -296,14 +288,6 @@
         "companymargin": "1.08",
         "pieceinouter": "1",
         "outerincase": "15"
-    },
-    {
-        "id": "43",
-        "name": "BVL CB 100RS -60PC -10U",
-        "mrp": "100",
-        "companymargin": "1.12",
-        "pieceinouter": "10",
-        "outerincase": "6"
     },
     {
         "id": "44",
@@ -398,8 +382,8 @@
         "name": "BV 45RS - 96PC - 130G - 6U",
         "mrp": "45",
         "companymargin": "1.08",
-        "pieceinouter": "12",
-        "outerincase": "8"
+        "pieceinouter": "6",
+        "outerincase": "16"
     },
     {
         "id": "59",
@@ -1186,14 +1170,6 @@
         "outerincase": "6"
     },
     {
-        "id": "173",
-        "name": "BV LIL 500GM -335RS -15PC",
-        "mrp": "335",
-        "companymargin": "1.08",
-        "pieceinouter": "1",
-        "outerincase": "15"
-    },
-    {
         "id": "174",
         "name": "SILK RA -90RS (NEW)-180PC -30U",
         "mrp": "90",
@@ -1216,22 +1192,6 @@
         "companymargin": "1.1",
         "pieceinouter": "1",
         "outerincase": "24"
-    },
-    {
-        "id": "177",
-        "name": "BV 1KG POUCH 425RS 12PC",
-        "mrp": "425",
-        "companymargin": "1.08",
-        "pieceinouter": "1",
-        "outerincase": "12"
-    },
-    {
-        "id": "178",
-        "name": "BV 1KG POUCH 432RS -12PC",
-        "mrp": "432",
-        "companymargin": "1.08",
-        "pieceinouter": "1",
-        "outerincase": "12"
     },
     {
         "id": "179",
