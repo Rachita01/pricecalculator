@@ -105,6 +105,15 @@ const DataComponent = ({ searchTerm }) => {
     }));
   };
 
+  const handleRemoveFromList = (item) => {
+    const itemIndex = list.findIndex(existItem => existItem.name === item.name);
+    if (itemIndex !== -1) {
+      const newDataList = [...list];
+      newDataList.splice(itemIndex, 1);
+      setList(newDataList);
+    }
+  }
+
   const handleAddToList = (item,quantity,option,price,discount) => {
 
     const itemIndex = list.findIndex(existItem => existItem.name === item.name);
@@ -218,6 +227,7 @@ const DataComponent = ({ searchTerm }) => {
           <th>Number of Cases</th>
           <th>Amount</th>
           <th>Discount%</th>
+          <th>Remove?</th>
         </tr>
       </thead>
       <tbody>
@@ -228,6 +238,7 @@ const DataComponent = ({ searchTerm }) => {
             <td>{item.numberOfCases}</td>
             <td>{item.amount}</td>
             <td>{item.discount}</td>
+            <td><button key={item.id} onClick={()=>handleRemoveFromList(item)}>Remove from list</button></td>
           </tr>
         ))}
       </tbody>
