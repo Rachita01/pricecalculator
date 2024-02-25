@@ -11,7 +11,10 @@ function HomeComponent() {
 
   return (
     <div>
-    <h1>Price Calculator</h1>
+      <div>
+      <h1>CADculator</h1>
+      </div>
+   
     <div>
     <button className='discountbutton' onClick={() => {
               navigation('/discountcalculator');

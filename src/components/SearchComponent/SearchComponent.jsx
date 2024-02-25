@@ -26,6 +26,7 @@ function SearchComponent() {
       <h3>Search your item here:</h3>
       <input
       type="text"
+      className='itemSearch'
       placeholder='Search Item'
       value={searchTerm}
       onChange={handleChange}

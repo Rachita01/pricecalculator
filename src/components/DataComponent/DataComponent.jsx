@@ -45,9 +45,9 @@ const DataComponent = ({ searchTerm }) => {
     return (item.mrp/item.companymargin).toFixed(4)
   }
 
-  const calculatePricePerOuter = (item) => {
-    return ((item.mrp * item.pieceinouter)/item.companymargin).toFixed(4)
-  }
+  // const calculatePricePerOuter = (item) => {
+  //   return ((item.mrp * item.pieceinouter)/item.companymargin).toFixed(4)
+  // }
 
   const calculatePricePerCase = (item) => {
     return ((item.mrp * item.pieceinouter * item.outerincase)/item.companymargin).toFixed(4)
@@ -62,14 +62,14 @@ const DataComponent = ({ searchTerm }) => {
     }
   }
 
-  const calculatePricePerOuterAfterDiscount = (item,discount) => {
-    if(discount === undefined || discount===0){
-      return calculatePricePerOuter(item);
-    }
-    else{
-     return ((calculatePricePerOuter(item) - ((discount/100)*calculatePricePerOuter(item)))).toFixed(4)
-    }
-  }
+  // const calculatePricePerOuterAfterDiscount = (item,discount) => {
+  //   if(discount === undefined || discount===0){
+  //     return calculatePricePerOuter(item);
+  //   }
+  //   else{
+  //    return ((calculatePricePerOuter(item) - ((discount/100)*calculatePricePerOuter(item)))).toFixed(4)
+  //   }
+  // }
 
   const calculatePricePerCaseAfterDiscount = (item,discount) => {
     if(discount === undefined || discount===0){
@@ -163,8 +163,6 @@ const DataComponent = ({ searchTerm }) => {
           <th>Item Name</th>
           <th>MRP</th>
           <th>Discount%</th>
-          <th>Price/Piece</th>
-          <th>Price/Outer</th>
           <th>Price/Case</th>
           <th>Quantity</th>
           <th>IN</th>
@@ -186,8 +184,6 @@ const DataComponent = ({ searchTerm }) => {
               onChange={(e) => handleDiscount(item.id,e.target.value)}
            />
             </td>
-            <td>{calculatePricePerPieceAfterDiscount(item,discount[item.id])}</td>
-            <td>{calculatePricePerOuterAfterDiscount(item,discount[item.id])}</td>
             <td>{calculatePricePerCaseAfterDiscount(item,discount[item.id])}</td>
             <td>
             <input

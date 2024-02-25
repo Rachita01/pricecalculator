@@ -1,6 +1,6 @@
 {
-  "short_name": "PD Calculator",
-  "name": "PD Calculator",
+  "short_name": "CADculator",
+  "name": "CADculator",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "cadculator.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "jj_logo.png",
+      "src": "cadculator.png",
       "type": "image/png",
       "sizes": "512x512"
     }

@@ -43,7 +43,7 @@ const ExcelCreation = ({ data,amount }) => {
   }
   return (
     <div>
-      <input type="text" placeholder='name' value={name} onChange={(e) => handleNameChange(e.target.value)}/>
+      <input type="text" placeholder='Name' value={name} onChange={(e) => handleNameChange(e.target.value)}/>
       <button onClick={handleDownload}>Download Excel</button>
     </div>
   );
